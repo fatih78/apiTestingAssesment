@@ -1,0 +1,9 @@
+target/
+history/
+build
+out
+.gradle
+buildNumber.properties
+.mvn/timing.properties
+.idea
+*.iml
