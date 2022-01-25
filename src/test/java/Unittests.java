@@ -1,14 +1,12 @@
 import org.junit.Assert;
 import org.junit.Test;
-import pageObjects.ValidateResponse;
-import pageObjects.VerifyStatus;
+import pageObjects.ApiCall;
 import utils.Enumerations;
 
 public class Unittests {
     private final String TESTURL = Enumerations.URL.MOVIES.getUrl();
     private final String API_KEY = Enumerations.URL.KEY.getUrl();
-    VerifyStatus verifyStatus = new VerifyStatus();
-    ValidateResponse validateResponse = new ValidateResponse();
+    ApiCall apiCall = new ApiCall();
 
 
     @Test
@@ -23,16 +21,16 @@ public class Unittests {
 
     @Test
     public void apiCallStatusCodeOK() {
-        verifyStatus.getRestTest(TESTURL+"?t=test"+"&y="+2021,200,API_KEY);
+        apiCall.getRestStatus(TESTURL+"?t=test"+"&y="+2021,200,API_KEY);
     }
 
     @Test
     public void apiCallStatusCodeNOK() {
-        verifyStatus.getRestTest(TESTURL+"bla"+"&y="+2021,400,API_KEY);
+        apiCall.getRestStatus(TESTURL+"bla"+"&y="+2021,400,API_KEY);
     }
 
     @Test
     public void apiCallValidateResponse() {
-        validateResponse.getRestTest(TESTURL+"?t=test"+"&y="+2021, "The Beta Test", API_KEY);
+        apiCall.getRestTestResponse(TESTURL+"?t=test"+"&y="+2021, "The Beta Test", API_KEY);
     }
 }
