@@ -13,7 +13,7 @@ public class Unittests {
 
     @Test
     public void url() {
-        Assert.assertEquals("http://www.omdbapi.com/?", this.TESTURL);
+        Assert.assertEquals("http://www.omdbapi.com/", this.TESTURL);
     }
 
     @Test

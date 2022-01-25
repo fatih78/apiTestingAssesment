@@ -23,8 +23,9 @@ https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 - Lombok
 
 ### Running the tests
-`gradle clean regressionTests`
+Run from a single feature file
+Run from the testRunner file
+or commandLine >> `gradle clean test` or `gradle clean build`
 
 ### Report output
 target/site/serenity/index.html
-target/cucumber-reports/cucumber.html  
