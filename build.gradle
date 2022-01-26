@@ -32,6 +32,7 @@ ext {
     junitVersion = '4.13.1'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
+    schemaValidator = '4.5.0'
 }
 
 dependencies {
@@ -40,14 +41,15 @@ dependencies {
     testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "io.rest-assured:json-schema-validator:${schemaValidator}",
             "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
             "junit:junit:${junitVersion}",
             "org.junit.platform:junit-platform-launcher:1.8.2",
             "org.junit.jupiter:junit-jupiter-engine:5.8.2",
             "org.junit.vintage:junit-vintage-engine:5.8.2",
             "org.assertj:assertj-core:${assertJVersion}"
-            testImplementation group: 'com.jayway.restassured', name: 'rest-assured', version: '2.9.0'
+    testImplementation group: 'com.jayway.restassured', name: 'rest-assured', version: '2.9.0'
+    testImplementation group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
 
 }
 

@@ -12,4 +12,9 @@ public class ApiCall extends Base {
     public void getRestTestResponse(String url, String parameter, String key) {
         super.getRestTestValidateResponse(url, parameter, key);
     }
+
+    @Step
+    public void getRestTestScheme(String url, String key, String response){
+        super.getRestSchemeValidation(url, key, response);
+    }
 }

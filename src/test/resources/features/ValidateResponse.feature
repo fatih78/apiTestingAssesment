@@ -1,7 +1,7 @@
-@moviesByTitleValidation
+@moviesByPartlyBodyValidation
 Feature: Find Movie by Title and Validate Response
 
-  @byTitleValidation
+  @byByPartlyBodyValidation
   Scenario Outline: Find movie by Title and validate statusCode
     When I search by a word "?t=test" and year 2021 validate "<values>" in response
     Examples:
